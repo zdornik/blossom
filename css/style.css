@@ -31,7 +31,9 @@ body {
   color: var(--blossom-text);
   line-height: 1.6;
   min-height: 100vh;
+  overflow-x: hidden;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
@@ -41,6 +43,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .section {
   scroll-margin-top: 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Navigation */
@@ -181,6 +190,8 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .section-hero {
@@ -251,6 +262,11 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
   opacity: 0.6;
   z-index: -1;
+}
+
+.botanical-bg img {
+  width: 100%;
+  height: auto;
 }
 
 .botanical-bg-right {

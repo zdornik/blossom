@@ -9,6 +9,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://blossom.app">
   <meta property="og:image" content="https://blossom.app/og-cover.png">
+  <meta name="theme-color" content="#7E9D6C">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%237E9D6C'/%3E%3Cpath d='M12 6v12M6 12h12' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -419,6 +423,9 @@
     document.addEventListener('DOMContentLoaded', () => {
       animateScoreRings();
     });
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(console.error));
+    }
   </script>
 </body>
 </html>

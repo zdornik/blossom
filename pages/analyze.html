@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7E9D6C">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Анализ продукта — BLOSSOM</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -370,6 +374,9 @@
     }
 
     document.addEventListener('DOMContentLoaded', animateScoreRings);
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(console.error));
+    }
   </script>
 </body>
 </html>
