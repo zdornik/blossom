@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль — BLOSSOM</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+          <path d="M12 6v12M6 12h12"/>
+        </svg>
+        BLOSSOM
+      </a>
+      
+      <div class="nav-links">
+        <a href="analyze.html" class="nav-link">Анализ</a>
+        <a href="products.html" class="nav-link">Мои продукты</a>
+        <a href="compatibility.html" class="nav-link">Совместимость</a>
+        <a href="assistant.html" class="nav-link">ИИ Ассистент</a>
+      </div>
+      
+      <div class="nav-actions">
+        <a href="profile.html" class="btn btn-secondary btn-sm">Профиль</a>
+        <a href="analyze.html" class="btn btn-primary btn-sm">Начать</a>
+      </div>
+      
+      <button class="mobile-menu-btn" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMobileMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobileNav" class="mobile-menu" hidden>
+      <a href="analyze.html" class="mobile-link">Анализ</a>
+      <a href="products.html" class="mobile-link">Мои продукты</a>
+      <a href="compatibility.html" class="mobile-link">Совместимость</a>
+      <a href="assistant.html" class="mobile-link">ИИ Ассистент</a>
+      <a href="profile.html" class="mobile-link">Профиль</a>
+      <a href="analyze.html" class="btn btn-primary btn-sm" style="width:100%;">Начать</a>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <section class="section section-hero">
+    <div class="container">
+      <div class="card" style="max-width: 700px; margin: 0 auto;">
+        <!-- Profile Header -->
+        <div class="profile-header">
+          <div class="profile-avatar">АМ</div>
+          <div class="profile-info">
+            <h2>Анна Морозова</h2>
+            <p>anna.morozova@email.com</p>
+          </div>
+        </div>
+        
+        <!-- Stats -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem; text-align: center;">
+          <div style="padding: 1rem; background: var(--blossom-bg); border-radius: var(--radius-md);">
+            <p style="font-size: 1.75rem; font-weight: 700; color: var(--blossom-accent);">6</p>
+            <p style="font-size: 0.85rem; color: var(--blossom-text-secondary);">Продуктов</p>
+          </div>
+          <div style="padding: 1rem; background: var(--blossom-bg); border-radius: var(--radius-md);">
+            <p style="font-size: 1.75rem; font-weight: 700; color: var(--blossom-accent);">12</p>
+            <p style="font-size: 0.85rem; color: var(--blossom-text-secondary);">Анализов</p>
+          </div>
+          <div style="padding: 1rem; background: var(--blossom-bg); border-radius: var(--radius-md);">
+            <p style="font-size: 1.75rem; font-weight: 700; color: var(--blossom-accent);">3</p>
+            <p style="font-size: 0.85rem; color: var(--blossom-text-secondary);">Дня подряд</p>
+          </div>
+        </div>
+        
+        <!-- Settings -->
+        <div class="settings-section">
+          <h3 class="settings-title">Тип кожи</h3>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-sm">Комбинированная</button>
+            <button class="btn btn-secondary btn-sm">Сухая</button>
+            <button class="btn btn-secondary btn-sm">Жирная</button>
+            <button class="btn btn-secondary btn-sm">Чувствительная</button>
+          </div>
+        </div>
+        
+        <div class="settings-section">
+          <h3 class="settings-title">Уведомления</h3>
+          
+          <div class="settings-item">
+            <div>
+              <p class="settings-item-label">Новые анализы</p>
+              <p class="settings-item-desc">Получать уведомления о завершении анализа</p>
+            </div>
+            <div class="toggle active" onclick="toggleSwitch(this)">
+              <div class="toggle-dot"></div>
+            </div>
+          </div>
+          
+          <div class="settings-item">
+            <div>
+              <p class="settings-item-label">Конфликты продуктов</p>
+              <p class="settings-item-desc">Уведомлять о несовместимых продуктах</p>
+            </div>
+            <div class="toggle active" onclick="toggleSwitch(this)">
+              <div class="toggle-dot"></div>
+            </div>
+          </div>
+          
+          <div class="settings-item">
+            <div>
+              <p class="settings-item-label">Советы по уходу</p>
+              <p class="settings-item-desc">Еженедельные рекомендации</p>
+            </div>
+            <div class="toggle" onclick="toggleSwitch(this)">
+              <div class="toggle-dot"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="settings-section">
+          <h3 class="settings-title">Аккаунт</h3>
+          
+          <div class="settings-item" style="cursor: pointer;">
+            <div>
+              <p class="settings-item-label">Изменить пароль</p>
+            </div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--blossom-text-secondary);">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </div>
+          
+          <div class="settings-item" style="cursor: pointer;">
+            <div>
+              <p class="settings-item-label">Приватность данных</p>
+            </div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--blossom-text-secondary);">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </div>
+          
+          <div class="settings-item" style="cursor: pointer;">
+            <div>
+              <p class="settings-item-label" style="color: var(--blossom-warning);">Выйти из аккаунта</p>
+            </div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--blossom-warning);">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </div>
+        </div>
+        
+        <!-- About -->
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--blossom-bg-secondary); text-align: center;">
+          <p style="font-size: 0.85rem; color: var(--blossom-text-secondary);">
+            BLOSSOM v1.0.0
+          </p>
+          <p style="font-size: 0.8rem; color: var(--blossom-text-secondary); margin-top: 0.25rem;">
+            Научно обоснованная ясность в уходе за кожей
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <p class="footer-copyright">&copy; 2026 BLOSSOM. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleSwitch(el) {
+      el.classList.toggle('active');
+    }
+    
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileNav');
+      const btn = document.querySelector('.mobile-menu-btn');
+      const isOpen = menu.hasAttribute('hidden') ? false : true;
+      if (isOpen) {
+        menu.setAttribute('hidden', '');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        menu.removeAttribute('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+  </script>
+</body>
+</html>

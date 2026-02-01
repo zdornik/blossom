@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BLOSSOM — анализ косметики с ИИ: проверка состава, безопасность, натуральность и совместимость продуктов за секунды.">
+  <meta property="og:title" content="BLOSSOM — Анализ косметики с ИИ">
+  <meta property="og:description" content="Вставь ингредиенты, получи понятный отчет о безопасности и совместимости.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blossom.app">
+  <meta property="og:image" content="https://blossom.app/og-cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%237E9D6C'/%3E%3Cpath d='M12 6v12M6 12h12' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <title>BLOSSOM — Анализ косметики с ИИ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+          <path d="M12 6v12M6 12h12"/>
+        </svg>
+        BLOSSOM
+      </a>
+      
+      <div class="nav-links">
+        <a href="pages/analyze.html" class="nav-link">Анализ</a>
+        <a href="pages/products.html" class="nav-link">Мои продукты</a>
+        <a href="pages/compatibility.html" class="nav-link">Совместимость</a>
+        <a href="pages/assistant.html" class="nav-link">ИИ Ассистент</a>
+      </div>
+      
+      <div class="nav-actions">
+        <a href="pages/profile.html" class="btn btn-secondary btn-sm">Профиль</a>
+        <a href="pages/analyze.html" class="btn btn-primary btn-sm">Начать</a>
+      </div>
+      
+      <button class="mobile-menu-btn" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMobileMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobileNav" class="mobile-menu" hidden>
+      <a href="pages/analyze.html" class="mobile-link">Анализ</a>
+      <a href="pages/products.html" class="mobile-link">Мои продукты</a>
+      <a href="pages/compatibility.html" class="mobile-link">Совместимость</a>
+      <a href="pages/assistant.html" class="mobile-link">ИИ Ассистент</a>
+      <a href="pages/profile.html" class="mobile-link">Профиль</a>
+      <a href="pages/analyze.html" class="btn btn-primary btn-sm" style="width:100%;">Начать</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="section section-hero">
+    <div class="botanical-bg botanical-bg-right">
+      <img src="images/botanical_wash_01.png" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            Анализ на основе ИИ
+          </div>
+          
+          <h1 class="hero-title">Пойми, что ты наносишь на кожу</h1>
+          
+          <p class="hero-text">
+            Вставь любой список ингредиентов. BLOSSOM проанализирует безопасность, натуральность и совместимость — за секунды.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="pages/analyze.html" class="btn btn-primary">
+              Проанализировать продукт
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#how-it-works" class="btn btn-secondary">Как это работает</a>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <img src="images/hero_leaf.png" alt="Лист с каплей" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section" id="how-it-works" style="background: white;">
+    <div class="botanical-bg botanical-bg-left" style="opacity: 0.4;">
+      <img src="images/botanical_wash_02.png" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    
+    <div class="container">
+      <div class="card" style="max-width: 1000px; margin: 0 auto;">
+        <h2 class="section-title">Три шага к пониманию</h2>
+        <p class="section-subtitle">Простой рабочий процесс, подкрепленный наукой.</p>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18M9 21V9"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Вставь или отсканируй состав</h3>
+            <p class="feature-text">Просто вставь список ингредиентов INCI или отсканируй этикетку продукта.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
+                <path d="M8.5 8.5v.01M16 15.5v.01M10 16v.01"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">ИИ проводит анализ</h3>
+            <p class="feature-text">Наш искусственный интеллект оценивает безопасность, натуральность и совместимость.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Получи понятные объяснения</h3>
+            <p class="feature-text">Без сложных терминов — только четкие инсайты, которые ты сможешь понять.</p>
+          </div>
+        </div>
+        
+        <div style="text-align: right; margin-top: 1.5rem;">
+          <a href="pages/analyze.html" class="link-arrow">
+            Попробовать сейчас
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Dashboard Preview -->
+  <section class="section">
+    <div class="botanical-bg botanical-bg-right" style="opacity: 0.4;">
+      <img src="images/botanical_wash_01.png" alt="">
+    </div>
+    
+    <div class="container">
+      <div class="card" style="max-width: 1000px; margin: 0 auto;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <h2 class="section-title">Увлажняющий крем Hydra-Glow</h2>
+          <span class="status-badge status-safe">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+            Безопасно
+          </span>
+        </div>
+        
+        <div class="scores-grid">
+          <div class="score-card">
+            <div class="score-ring-container">
+              <div class="score-ring" data-score="92">
+                <svg viewBox="0 0 100 100">
+                  <circle class="score-ring-bg" cx="50" cy="50" r="45"/>
+                  <circle class="score-ring-progress" cx="50" cy="50" r="45"/>
+                </svg>
+                <div class="score-ring-value">
+                  <div class="score-ring-number">92</div>
+                  <div class="score-ring-total">/100</div>
+                </div>
+              </div>
+              <span class="score-ring-label">Безопасность</span>
+            </div>
+          </div>
+          
+          <div class="score-card">
+            <div class="score-ring-container">
+              <div class="score-ring" data-score="78">
+                <svg viewBox="0 0 100 100">
+                  <circle class="score-ring-bg" cx="50" cy="50" r="45"/>
+                  <circle class="score-ring-progress" cx="50" cy="50" r="45" style="stroke: var(--blossom-caution);"/>
+                </svg>
+                <div class="score-ring-value">
+                  <div class="score-ring-number">78</div>
+                  <div class="score-ring-total">/100</div>
+                </div>
+              </div>
+              <span class="score-ring-label">Натуральность</span>
+            </div>
+          </div>
+          
+          <div class="score-card">
+            <div class="score-ring-container">
+              <div class="score-ring" data-score="88">
+                <svg viewBox="0 0 100 100">
+                  <circle class="score-ring-bg" cx="50" cy="50" r="45"/>
+                  <circle class="score-ring-progress" cx="50" cy="50" r="45"/>
+                </svg>
+                <div class="score-ring-value">
+                  <div class="score-ring-number">88</div>
+                  <div class="score-ring-total">/100</div>
+                </div>
+              </div>
+              <span class="score-ring-label">Совместимость</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="risk-list">
+          <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blossom-text-secondary); margin-bottom: 1rem;">Оценка рисков</p>
+          
+          <div class="risk-item">
+            <div class="risk-icon safe">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+            </div>
+            <span class="risk-text">0 ингредиентов с высоким риском</span>
+          </div>
+          
+          <div class="risk-item">
+            <div class="risk-icon caution">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            </div>
+            <span class="risk-text">2 раздражителя низкого риска (рекомендуется тест-патч)</span>
+          </div>
+          
+          <div class="risk-item">
+            <div class="risk-icon info">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="16" x2="12" y2="12"/>
+                <line x1="12" y1="8" x2="12.01" y2="8"/>
+              </svg>
+            </div>
+            <span class="risk-text">Присутствует отдушка (может повлиять на чувствительную кожу)</span>
+          </div>
+        </div>
+        
+        <div style="margin-top: 1.5rem;">
+          <a href="pages/analyze.html" class="link-arrow">
+            Смотреть полный отчет
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="background: var(--blossom-bg-secondary); min-height: auto; padding: 5rem 0;">
+    <div class="container">
+      <div class="card" style="max-width: 700px; margin: 0 auto; text-align: center;">
+        <h2 class="page-title">Готов разобрать свою косметику?</h2>
+        <p class="page-subtitle" style="margin-bottom: 2rem;">
+          Присоединяйся к тысячам людей, которые читают этикетки с уверенностью.
+        </p>
+        
+        <form onsubmit="handleSubscribe(event)" style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;" novalidate>
+          <label class="sr-only" for="email">Email адрес</label>
+          <input 
+            type="email" 
+            id="email"
+            placeholder="Email адрес" 
+            required
+            inputmode="email"
+            style="flex: 1; min-width: 250px; padding: 1rem 1.25rem; border: 2px solid var(--blossom-bg-secondary); border-radius: 999px; font-family: inherit; font-size: 0.95rem;"
+          >
+          <button type="submit" class="btn btn-primary">
+            Получить ранний доступ
+          </button>
+        </form>
+        
+        <p style="font-size: 0.85rem; color: var(--blossom-text-secondary); margin-top: 1rem;">
+          Никакого спама. Отписка в любое время.
+        </p>
+        
+        <div style="margin-top: 1.5rem;">
+          <a href="pages/analyze.html" class="link-arrow">
+            Или проанализируй первый продукт
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M12 6v12M6 12h12"/>
+            </svg>
+            BLOSSOM
+          </div>
+          <p class="footer-text">Научно обоснованная ясность в уходе за кожей.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Продукт</h4>
+          <ul class="footer-links">
+            <li><a href="pages/analyze.html">Анализ</a></li>
+            <li><a href="pages/products.html">Мои продукты</a></li>
+            <li><a href="pages/compatibility.html">Совместимость</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Компания</h4>
+          <ul class="footer-links">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Карьера</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Правовая информация</h4>
+          <ul class="footer-links">
+            <li><a href="#">Конфиденциальность</a></li>
+            <li><a href="#">Условия</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 BLOSSOM. Все права защищены.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileNav');
+      const btn = document.querySelector('.mobile-menu-btn');
+      const isOpen = menu.hasAttribute('hidden') ? false : true;
+      if (isOpen) {
+        menu.setAttribute('hidden', '');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        menu.removeAttribute('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    function handleSubscribe(e) {
+      e.preventDefault();
+      const emailInput = e.target.querySelector('input[type="email"]');
+      if (!emailInput.checkValidity()) {
+        emailInput.reportValidity();
+        return;
+      }
+      emailInput.disabled = true;
+      const button = e.target.querySelector('button[type="submit"]');
+      button.textContent = 'Отправляем...';
+      setTimeout(() => {
+        button.textContent = 'Получить ранний доступ';
+        emailInput.disabled = false;
+        alert('Спасибо за интерес! Мы уведомим тебя о запуске BLOSSOM.');
+        e.target.reset();
+      }, 800);
+    }
+
+    function animateScoreRings() {
+      const rings = document.querySelectorAll('.score-ring');
+      rings.forEach((ring) => {
+        const value = parseInt(ring.dataset.score, 10);
+        if (Number.isNaN(value)) return;
+        const circle = ring.querySelector('.score-ring-progress');
+        const circumference = 2 * Math.PI * 45;
+        const offset = circumference * (1 - value / 100);
+        circle.style.strokeDashoffset = circumference;
+        requestAnimationFrame(() => {
+          circle.style.strokeDashoffset = offset;
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      animateScoreRings();
+    });
+  </script>
+</body>
+</html>

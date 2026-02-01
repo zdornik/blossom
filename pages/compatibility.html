@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Совместимость — BLOSSOM</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+          <path d="M12 6v12M6 12h12"/>
+        </svg>
+        BLOSSOM
+      </a>
+      
+      <div class="nav-links">
+        <a href="analyze.html" class="nav-link">Анализ</a>
+        <a href="products.html" class="nav-link">Мои продукты</a>
+        <a href="compatibility.html" class="nav-link active">Совместимость</a>
+        <a href="assistant.html" class="nav-link">ИИ Ассистент</a>
+      </div>
+      
+      <div class="nav-actions">
+        <a href="profile.html" class="btn btn-secondary btn-sm">Профиль</a>
+        <a href="analyze.html" class="btn btn-primary btn-sm">Начать</a>
+      </div>
+      
+      <button class="mobile-menu-btn" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMobileMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobileNav" class="mobile-menu" hidden>
+      <a href="analyze.html" class="mobile-link">Анализ</a>
+      <a href="products.html" class="mobile-link">Мои продукты</a>
+      <a href="compatibility.html" class="mobile-link">Совместимость</a>
+      <a href="assistant.html" class="mobile-link">ИИ Ассистент</a>
+      <a href="profile.html" class="mobile-link">Профиль</a>
+      <a href="analyze.html" class="btn btn-primary btn-sm" style="width:100%;">Начать</a>
+    </div>
+  </nav>
+
+  <!-- Compatibility Section -->
+  <section class="section section-hero">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title">Проверка совместимости</h1>
+        <p class="page-subtitle">
+          Узнай, какие продукты нельзя использовать вместе, чтобы избежать раздражения.
+        </p>
+      </div>
+      
+      <!-- Warning Card -->
+      <div class="card" style="max-width: 900px; margin: 0 auto 2rem;">
+        <div class="warning-card">
+          <div class="warning-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            Обнаружен конфликт!
+          </div>
+          
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Отшелушивающая кислота + Ретиноид</h3>
+          <p style="color: var(--blossom-text-secondary); margin-bottom: 1rem;">
+            Использование обоих продуктов в одной рутине может нарушить защитный барьер кожи.
+          </p>
+          
+          <div style="background: white; border-radius: var(--radius-md); padding: 1rem;">
+            <p style="font-size: 0.95rem;">
+              <strong style="color: var(--blossom-accent);">Совет:</strong> 
+              Используй кислоты утром, а ретиноиды — вечером. Так ты получишь пользу от обоих ингредиентов без риска раздражения.
+            </p>
+          </div>
+          
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <div style="flex: 1; display: flex; align-items: center; gap: 1rem; background: white; padding: 1rem; border-radius: var(--radius-md);">
+              <img src="../images/product_toner.jpg" alt="Тоник" style="width: 60px; height: 60px; object-fit: cover; border-radius: var(--radius-sm);">
+              <div>
+                <p style="font-weight: 500; font-size: 0.95rem;">Отшелушивающий тоник</p>
+                <p style="font-size: 0.8rem; color: var(--blossom-text-secondary);">AHA/BHA формула</p>
+              </div>
+            </div>
+            
+            <div style="flex: 1; display: flex; align-items: center; gap: 1rem; background: white; padding: 1rem; border-radius: var(--radius-md);">
+              <img src="../images/product_retinoid.jpg" alt="Ретиноид" style="width: 60px; height: 60px; object-fit: cover; border-radius: var(--radius-sm);">
+              <div>
+                <p style="font-weight: 500; font-size: 0.95rem;">Ретиноидный крем</p>
+                <p style="font-size: 0.8rem; color: var(--blossom-text-secondary);">Ночное обновление</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Safe Combinations -->
+      <div class="card" style="max-width: 900px; margin: 0 auto;">
+        <h2 class="section-title" style="margin-bottom: 1.5rem;">Безопасные комбинации</h2>
+        
+        <div style="display: grid; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--blossom-bg); border-radius: var(--radius-md);">
+            <div style="width: 40px; height: 40px; background: rgba(126, 157, 108, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--blossom-safe);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+            </div>
+            <div style="flex: 1;">
+              <p style="font-weight: 500;">Витамин C + SPF</p>
+              <p style="font-size: 0.85rem; color: var(--blossom-text-secondary);">Идеальное утреннее сочетание для защиты и сияния</p>
+            </div>
+            <span class="status-badge status-safe">Рекомендуется</span>
+          </div>
+          
+          <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--blossom-bg); border-radius: var(--radius-md);">
+            <div style="width: 40px; height: 40px; background: rgba(126, 157, 108, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--blossom-safe);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+            </div>
+            <div style="flex: 1;">
+              <p style="font-weight: 500;">Ниацинамид + Гиалуроновая кислота</p>
+              <p style="font-size: 0.85rem; color: var(--blossom-text-secondary);">Отличное увлажнение и восстановление барьера</p>
+            </div>
+            <span class="status-badge status-safe">Рекомендуется</span>
+          </div>
+          
+          <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--blossom-bg); border-radius: var(--radius-md);">
+            <div style="width: 40px; height: 40px; background: rgba(126, 157, 108, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--blossom-safe);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+            </div>
+            <div style="flex: 1;">
+              <p style="font-weight: 500;">Ретиноид + Увлажняющий крем</p>
+              <p style="font-size: 0.85rem; color: var(--blossom-text-secondary);">Снижает сухость от ретиноидов</p>
+            </div>
+            <span class="status-badge status-safe">Рекомендуется</span>
+          </div>
+        </div>
+        
+        <!-- Tips -->
+        <div style="margin-top: 2rem; padding: 1.5rem; background: var(--blossom-bg-secondary); border-radius: var(--radius-lg);">
+          <h4 style="font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--blossom-accent);">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            Полезные советы
+          </h4>
+          <ul style="list-style: none; display: grid; gap: 0.75rem;">
+            <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem;">
+              <span style="color: var(--blossom-accent);">•</span>
+              Вводи новые продукты по одному с интервалом в 1-2 недели
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem;">
+              <span style="color: var(--blossom-accent);">•</span>
+              Делай тест-патч при использовании активных ингредиентов
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem;">
+              <span style="color: var(--blossom-accent);">•</span>
+              Не комбинируй сразу несколько активных кислот
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem;">
+              <span style="color: var(--blossom-accent);">•</span>
+              Всегда используй SPF при применении ретиноидов и кислот
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <p class="footer-copyright">&copy; 2026 BLOSSOM. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileNav');
+      const btn = document.querySelector('.mobile-menu-btn');
+      const isOpen = menu.hasAttribute('hidden') ? false : true;
+      if (isOpen) {
+        menu.setAttribute('hidden', '');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        menu.removeAttribute('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+  </script>
+</body>
+</html>
